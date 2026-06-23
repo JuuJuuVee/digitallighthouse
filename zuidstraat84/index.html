@@ -1,1 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zuidstraat 84, Den Helder — Digital Lighthouse Case Study</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f7f5; color: #1a1a1a; }
+.pg { max-width: 720px; margin: 0 auto; padding: 3rem 2rem; }
+.lbl { font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: #888; margin-bottom: 6px; }
+.h1 { font-size: 22px; font-weight: 500; color: #1a1a1a; margin-bottom: 10px; font-family: Georgia, serif; }
+.h2 { font-size: 17px; font-weight: 500; color: #1a1a1a; margin-bottom: 10px; font-family: Georgia, serif; }
+.sm { font-size: 14px; color: #555; line-height: 1.65; }
+.xs { font-size: 12px; color: #888; line-height: 1.5; }
+hr { border: none; border-top: 1px solid #e8e5e0; margin: 2.5rem 0; }
+.sec { margin-bottom: 2rem; }
+.fg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.fr { display: flex; justify-content: space-between; align-items: baseline; padding: 8px 10px; background: #f0ede8; border-radius: 6px; font-size: 13px; }
+.fk { color: #666; }
+.fv { font-weight: 500; color: #1a1a1a; }
+.sg { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin: 10px 0; }
+.sc { background: #f0ede8; border-radius: 6px; padding: 12px; }
+.sn { font-size: 30px; font-weight: 500; color: #1a1a1a; }
+.sl { font-size: 12px; color: #888; margin-top: 3px; }
+.sl-list { display: flex; flex-direction: column; gap: 8px; }
+.si { display: flex; align-items: center; gap: 10px; font-size: 14px; padding: 10px 12px; background: #f0ede8; border-radius: 6px; }
+.dd { width: 8px; height: 8px; border-radius: 50%; background: #1D9E75; flex-shrink: 0; }
+.da { width: 8px; height: 8px; border-radius: 50%; background: #378ADD; flex-shrink: 0; }
+.dw { width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid #bbb; flex-shrink: 0; }
+.hb { border: 1px solid #ddd; border-radius: 10px; padding: 1.25rem; }
+.hl { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #888; margin-bottom: 8px; }
+.ht { font-size: 15px; color: #1a1a1a; line-height: 1.65; }
+.fw { display: grid; grid-template-columns: repeat(6,1fr); gap: 6px; margin: 10px 0; }
+.fc { background: #f0ede8; border-radius: 6px; padding: 10px 6px; text-align: center; }
+.fn { font-size: 20px; font-weight: 500; color: #1a1a1a; }
+.fl { font-size: 11px; color: #888; margin-top: 3px; line-height: 1.3; }
+.ar { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid #e8e5e0; font-size: 13px; }
+.as { min-width: 100px; color: #888; }
+.ab { flex: 1; height: 5px; background: #e8e5e0; border-radius: 3px; overflow: hidden; }
+.af { height: 100%; border-radius: 3px; background: #378ADD; }
+.an { min-width: 20px; text-align: right; color: #888; }
+.ti { display: flex; gap: 14px; padding: 10px 0; border-bottom: 1px solid #e8e5e0; align-items: flex-start; }
+.td { font-size: 12px; color: #888; min-width: 78px; padding-top: 3px; flex-shrink: 0; }
+.tt { font-size: 14px; color: #1a1a1a; }
+.ts { font-size: 12px; color: #888; margin-top: 2px; }
+.bdg { display: inline-block; font-size: 11px; padding: 2px 7px; border-radius: 4px; margin-left: 6px; }
+.bd { background: #d4f0e4; color: #0a6040; }
+.ba { background: #d4e8f8; color: #1050a0; }
+.bw { background: #e8e5e0; color: #888; }
+.cr { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #e8e5e0; font-size: 14px; color: #1a1a1a; }
+</style>
+</head>
+<body>
+<div class="pg">
 
+<div class="sec">
+  <div class="lbl">Digital Lighthouse — Case Study #1 — Active experiment</div>
+  <div class="h1">Zuidstraat 84, Den Helder</div>
+  <p class="sm">This page documents a live field experiment. It does not claim results. It records what happened, when it happened, and where it came from.</p>
+</div>
+
+<hr>
+
+<div class="sec">
+  <div class="lbl">Section 1</div>
+  <div class="h2">Why this property was chosen</div>
+  <p class="sm" style="margin-bottom:12px">This property contains multiple underused information assets. Digital Lighthouse is testing whether making those assets easier to discover creates measurable buyer interest.</p>
+  <div class="fg">
+    <div class="fr"><span class="fk">Address</span><span class="fv">Zuidstraat 84, Den Helder</span></div>
+    <div class="fr"><span class="fk">Asking price</span><span class="fv">€249,500 k.k.</span></div>
+    <div class="fr"><span class="fk">Living area</span><span class="fv">140 m²</span></div>
+    <div class="fr"><span class="fk">Plot size</span><span class="fv">105 m²</span></div>
+    <div class="fr"><span class="fk">Zoning</span><span class="fv">Mixed use</span></div>
+    <div class="fr"><span class="fk">Garden</span><span class="fv">Yes — SW facing</span></div>
+    <div class="fr"><span class="fk">Rear access</span><span class="fv">Yes</span></div>
+    <div class="fr"><span class="fk">Roof orientation</span><span class="fv">South facing</span></div>
+    <div class="fr" style="grid-column: span 2;"><span class="fk">Architect plans</span><span class="fv">Prepared for units 84 and 84A</span></div>
+  </div>
+  <p class="sm" style="margin-top:12px">Comparable active listings in Den Helder indicate a broad price range for project properties. Zuidstraat 84 is being tested as a case study because it combines multiple factual attributes that are not clearly communicated through a standard Funda listing.</p>
+</div>
+
+<hr>
+
+<div class="sec">
+  <div class="lbl">Section 2</div>
+  <div class="h2">Baseline</div>
+  <div class="sg">
+    <div class="sc"><div class="sn">6</div><div class="sl">weeks on market before experiment</div></div>
+    <div class="sc"><div class="sn">2</div><div class="sl">viewings generated</div></div>
+    <div class="sc"><div class="sn">0</div><div class="sl">AI search presence</div></div>
+  </div>
+  <p class="sm">Realtor: Laan Makelaars. Fee: fixed €3,000. Distribution: Funda listing only. No buyer persona targeting. No paid discovery layer. No presence in Perplexity, ChatGPT, or Gemini for relevant buyer search queries.</p>
+</div>
+
+<hr>
+
+<div class="sec">
+  <div class="lbl">Section 3</div>
+  <div class="h2">Live experiment status</div>
+  <div class="sl-list">
+    <div class="si"><div class="dd"></div><span>Research complete — June 23 2026</span></div>
+    <div class="si"><div class="dd"></div><span>Landing page live — June 23 2026</span></div>
+    <div class="si"><div class="da"></div><span>Data collection active — Day 1 of 21-day organic test</span></div>
+    <div class="si"><div class="dw"></div><span style="color:#888">First qualified lead — pending</span></div>
+    <div class="si"><div class="dw"></div><span style="color:#888">First qualified viewing — pending</span></div>
+  </div>
+</div>
+
+<hr>
+
+<div class="sec">
+  <div class="lbl">Section 4</div>
+  <div class="h2">Digital Lighthouse experiment</div>
+  <div class="hb">
+    <div class="hl">Hypothesis</div>
+    <div class="ht">An AI-first discovery layer — content structured for conversational search engines rather than Funda filters — can generate measurable buyer interest that traditional property marketing does not reach. This experiment tests whether that interest is real, attributable, and repeatable.</div>
+  </div>
+  <p class="sm" style="margin-top:10px">Phase 1: 21-day organic test. Zero paid spend. If organic produces zero qualified enquiries by Day 21, a paid discovery layer activates. All leads route directly to Laan Makelaars. Digital Lighthouse does not act as a realtor and does not handle property transactions.</p>
+</div>
+
+<hr>
+
+<div class="sec">
+  <div class="lbl">Section 5 — Graph 1</div>
+  <div class="h2">Before vs after — viewings</div>
+  <p class="sm" style="margin-bottom:12px">Baseline confirmed at 2 viewings in 6 weeks. Experiment tracking from June 23 2026.</p>
+  <div style="position:relative;width:100%;height:200px">
+    <canvas id="g1" role="img" aria-label="Bar chart. Before: 2 viewings in 6 weeks. After: data collection active.">Before: 2 viewings in 6 weeks. After: data collection active.</canvas>
+  </div>
+  <p class="xs" style="margin-top:8px">Right bar updates as viewings attributed to Digital Lighthouse discovery are confirmed.</p>
+</div>
+
+<hr>
+
+<div class="sec">
+  <div class="lbl">Section 6</div>
+  <div class="h2">How results are measured</div>
+  <p class="sm" style="margin-bottom:12px">Six-stage funnel. Each stage requires independent confirmation before a number is recorded.</p>
+  <div class="fw">
+    <div class="fc"><div class="fn">—</div><div class="fl">Discovery<br>visits</div></div>
+    <div class="fc"><div class="fn">—</div><div class="fl">Intent<br>plan req.</div></div>
+    <div class="fc"><div class="fn">—</div><div class="fl">Enquiry<br>qualified</div></div>
+    <div class="fc"><div class="fn">—</div><div class="fl">Viewing<br>booked</div></div>
+    <div class="fc"><div class="fn">—</div><div class="fl">Offer<br>received</div></div>
+    <div class="fc"><div class="fn">—</div><div class="fl">Sale<br>closed</div></div>
+  </div>
+  <p class="xs">Dashes indicate data not yet received. Numbers update manually as events are confirmed.</p>
+</div>
+
+<hr>
+
+<div class="sec">
+  <div class="lbl">Section 7</div>
+  <div class="h2">Attribution</div>
+  <p class="sm" style="margin-bottom:12px">Every enquiry is logged with a source. Without attribution the experiment cannot demonstrate causation.</p>
+  <div class="ar"><span class="as">Funda</span><div class="ab"><div class="af" style="width:0%"></div></div><span class="an">—</span></div>
+  <div class="ar"><span class="as">Google search</span><div class="ab"><div class="af" style="width:0%"></div></div><span class="an">—</span></div>
+  <div class="ar"><span class="as">Perplexity</span><div class="ab"><div class="af" style="width:0%"></div></div><span class="an">—</span></div>
+  <div class="ar"><span class="as">ChatGPT</span><div class="ab"><div class="af" style="width:0%"></div></div><span class="an">—</span></div>
+  <div class="ar"><span class="as">Gemini</span><div class="ab"><div class="af" style="width:0%"></div></div><span class="an">—</span></div>
+  <div class="ar"><span class="as">Referral</span><div class="ab"><div class="af" style="width:0%"></div></div><span class="an">—</span></div>
+  <div class="ar"><span class="as">Direct URL</span><div class="ab"><div class="af" style="width:0%"></div></div><span class="an">—</span></div>
+  <div class="ar" style="border:none"><span class="as">Other</span><div class="ab"><div class="af" style="width:0%"></div></div><span class="an">—</span></div>
+</div>
+
+<hr>
+
+<div class="sec">
+  <div class="lbl">Section 8</div>
+  <div class="h2">Timeline</div>
+  <div class="ti">
+    <div class="td">23 Jun 2026</div>
+    <div class="dd" style="margin-top:4px;flex-shrink:0"></div>
+    <div><div class="tt">Research completed<span class="bdg bd">confirmed</span></div><div class="ts">Market data, buyer personas, realtor digital audit, GEO visibility assessment</div></div>
+  </div>
+  <div class="ti">
+    <div class="td">23 Jun 2026</div>
+    <div class="dd" style="margin-top:4px;flex-shrink:0"></div>
+    <div><div class="tt">Landing page live<span class="bdg bd">confirmed</span></div><div class="ts">digitallighthouse.online/zuidstraat84 — three buyer personas, GEO-optimised, HubSpot form to Laan Makelaars</div></div>
+  </div>
+  <div class="ti">
+    <div class="td">23 Jun 2026</div>
+    <div class="da" style="margin-top:4px;flex-shrink:0"></div>
+    <div><div class="tt">Organic test period begins<span class="bdg ba">active</span></div><div class="ts">21 days. Zero paid spend. GA4 and HubSpot tracking all visits and enquiries.</div></div>
+  </div>
+  <div class="ti"><div class="td">—</div><div class="dw" style="margin-top:4px;flex-shrink:0"></div><div><div class="tt">First AI referral<span class="bdg bw">pending</span></div><div class="ts">First visit from Perplexity, ChatGPT, Gemini, or Google AI Overview</div></div></div>
+  <div class="ti"><div class="td">—</div><div class="dw" style="margin-top:4px;flex-shrink:0"></div><div><div class="tt">First enquiry<span class="bdg bw">pending</span></div><div class="ts">Source logged on receipt</div></div></div>
+  <div class="ti"><div class="td">—</div><div class="dw" style="margin-top:4px;flex-shrink:0"></div><div><div class="tt">First architect plan request<span class="bdg bw">pending</span></div><div class="ts">Strongest intent signal in the funnel</div></div></div>
+  <div class="ti"><div class="td">—</div><div class="dw" style="margin-top:4px;flex-shrink:0"></div><div><div class="tt">First qualified viewing<span class="bdg bw">pending</span></div><div class="ts">Viewing booked via Laan Makelaars following Digital Lighthouse discovery</div></div></div>
+  <div class="ti"><div class="td">—</div><div class="dw" style="margin-top:4px;flex-shrink:0"></div><div><div class="tt">Day 21 review<span class="bdg bw">pending</span></div><div class="ts">Organic test concludes. Data reviewed. Decision on paid layer if needed.</div></div></div>
+  <div class="ti"><div class="td">—</div><div class="dw" style="margin-top:4px;flex-shrink:0"></div><div><div class="tt">Day 30 evidence review<span class="bdg bw">pending</span></div><div class="ts">All five measurement questions answered. Case study published in full.</div></div></div>
+  <div class="ti" style="border:none"><div class="td">—</div><div class="dw" style="margin-top:4px;flex-shrink:0"></div><div><div class="tt">Sale<span class="bdg bw">pending</span></div><div class="ts">If and when it occurs — source attributed</div></div></div>
+</div>
+
+<hr>
+
+<div class="sec">
+  <div class="lbl">Section 9 — Graph 2</div>
+  <div class="h2">Full funnel dashboard</div>
+  <p class="sm" style="margin-bottom:12px">Cumulative totals by stage. Updates as data is confirmed.</p>
+  <div style="position:relative;width:100%;height:260px">
+    <canvas id="g2" role="img" aria-label="Funnel dashboard. All stages at zero. Active from June 23 2026.">All stages at zero. Active from June 23 2026.</canvas>
+  </div>
+</div>
+
+<hr>
+
+<div class="sec">
+  <div class="lbl">Evidence criteria</div>
+  <div class="h2">What this experiment must answer</div>
+  <div class="cr">Did AI discovery generate traffic that Funda did not?<span class="bdg bw">pending</span></div>
+  <div class="cr">Did buyers engage with persona-specific content?<span class="bdg bw">pending</span></div>
+  <div class="cr">Did it generate qualified enquiries?<span class="bdg bw">pending</span></div>
+  <div class="cr">Did it generate qualified viewings?<span class="bdg bw">pending</span></div>
+  <div class="cr" style="border:none">Did it outperform doing nothing?<span class="bdg bw">pending</span></div>
+</div>
+
+<hr>
+
+<p class="xs">All enquiries route directly to Laan Makelaars, Den Helder. Digital Lighthouse does not act as a realtor. This page is updated manually as data is received and verified. Last updated: June 23 2026.</p>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+new Chart(document.getElementById('g1'),{type:'bar',data:{labels:['Before DLH — 6 weeks','After DLH — from Jun 23'],datasets:[{data:[2,0],backgroundColor:['#e8e5e0','#378ADD'],borderColor:['#ccc','#185FA5'],borderWidth:1,borderRadius:4,label:'Viewings'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.raw===0?' Data collection active':' '+c.raw+' viewings'}}}},scales:{x:{grid:{display:false},ticks:{color:'#888',font:{size:12}}},y:{beginAtZero:true,max:6,ticks:{stepSize:1,color:'#888',font:{size:12}},grid:{color:'rgba(0,0,0,0.06)'}}}}});
+new Chart(document.getElementById('g2'),{type:'bar',data:{labels:['Page visits','Plan requests','Enquiries','Viewings','Offers','Sale'],datasets:[{data:[0,0,0,0,0,0],backgroundColor:['#378ADD','#1D9E75','#639
+}}}});
+new Chart(document.getElementById('g2'),{type:'bar',data:{labels:['Page visits','Plan requests','Enquiries','Viewings','Offers','Sale'],datasets:[{data:[0,0,0,0,0,0],backgroundColor:['#378ADD','#1D9E75','#639922','#BA7517','#D85A30','#534AB7'],borderRadius:4,borderWidth:0,label:'Count'}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.raw===0?' Pending':' '+c.raw}}}},scales:{x:{beginAtZero:true,max:10,ticks:{stepSize:1,color:'#888',font:{size:12}},grid:{color:'rgba(0,0,0,0.06)'}},y:{grid:{display:false},ticks:{color:'#888',font:{size:12}}}}}});
+</script>
+</body>
+</html>
