@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Lighthouse</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Georgia, serif; overflow-x: hidden; background: #e8eef5; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 3rem;
+    background: rgba(232, 238, 245, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(30, 60, 100, 0.12);
+  }
+  .nav-logo { font-size: 1.1rem; font-weight: 500; color: #1a3558; letter-spacing: 0.08em; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-size: 0.9rem; color: #2a4a78; text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
+  .nav-links a:hover { color: #c0392b; }
+  .nav-lang { font-size: 0.85rem; color: #2a4a78; cursor: pointer; border: 1px solid #2a4a78; padding: 0.3rem 0.7rem; border-radius: 3px; }
+  .hero { position: relative; width: 100%; height: 100vh; min-height: 600px; overflow: hidden; display: flex; align-items: center; }
+  .scene { position: absolute; inset: 0; }
+  .hero-content { position: relative; z-index: 10; max-width: 480px; padding: 0 3rem; margin-top: 3rem; }
+  .hero-content h1 { font-size: 2.8rem; font-weight: 400; color: #1a3558; line-height: 1.2; margin-bottom: 1.2rem; }
+  .hero-content p { font-size: 1.05rem; color: #2a4a78; line-height: 1.7; margin-bottom: 2rem; font-family: -apple-system, sans-serif; }
+  .hero-cta { display: inline-block; padding: 0.8rem 2rem; background: #1a3558; color: #f0f4f8; font-family: -apple-system, sans-serif; font-size: 0.9rem; letter-spacing: 0.06em; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s; }
+  .hero-cta:hover { background: #c0392b; }
+  .section { position: relative; padding: 5rem 3rem; background: #f4f7fa; }
+  .section-inner { max-width: 900px; margin: 0 auto; }
+  .section h2 { font-size: 1.8rem; font-weight: 400; color: #1a3558; margin-bottom: 1rem; }
+  .section p { font-size: 1rem; color: #3a5070; line-height: 1.8; font-family: -apple-system, sans-serif; max-width: 640px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+  .card { background: #fff; border: 1px solid #d0dae8; padding: 1.8rem; border-radius: 2px; }
+  .card h3 { font-size: 1rem; color: #1a3558; margin-bottom: 0.7rem; font-weight: 500; font-family: -apple-system, sans-serif; }
+  .card p { font-size: 0.9rem; color: #5a7090; line-height: 1.7; font-family: -apple-system, sans-serif; }
+  .card-num { font-size: 2rem; color: #c0d0e0; font-weight: 400; margin-bottom: 0.5rem; }
+  .case-study { background: #1a3558; padding: 4rem 3rem; }
+  .case-study-inner { max-width: 900px; margin: 0 auto; }
+  .case-study h2 { font-size: 1.6rem; font-weight: 400; color: #e8eef5; margin-bottom: 0.8rem; }
+  .case-study p { font-size: 0.95rem; color: #a0b8d0; line-height: 1.8; font-family: -apple-system, sans-serif; max-width: 580px; margin-bottom: 1.8rem; }
+  .cs-tag { display: inline-block; font-size: 0.75rem; letter-spacing: 0.1em; color: #7090b0; border: 1px solid #3a5878; padding: 0.3rem 0.8rem; margin-bottom: 1.2rem; font-family: -apple-system, sans-serif; text-transform: uppercase; }
+  .cs-link { font-size: 0.9rem; color: #e8eef5; text-decoration: none; border-bottom: 1px solid #c0392b; padding-bottom: 2px; font-family: -apple-system, sans-serif; }
+  footer { background: #111e2e; padding: 2.5rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  footer p { font-size: 0.85rem; color: #506080; font-family: -apple-system, sans-serif; }
+  footer a { font-size: 0.85rem; color: #7090b0; font-family: -apple-system, sans-serif; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Digital Lighthouse</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#method">Method</a></li>
+    <li><a href="#cases">Cases</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-lang">NL / EN</div>
+</nav>
+
+<section class="hero">
+  <svg class="scene" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#3a4a5a"/>
+        <stop offset="45%" stop-color="#6a8098"/>
+        <stop offset="75%" stop-color="#a8bece"/>
+        <stop offset="100%" stop-color="#d0dde8"/>
+      </linearGradient>
+      <linearGradient id="sea" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#1e2e3e"/>
+        <stop offset="50%" stop-color="#3d5878"/>
+        <stop offset="100%" stop-color="#6888a8"/>
+      </linearGradient>
+      <linearGradient id="beam" x1="1" y1="0" x2="0" y2="0">
+        <stop offset="0%" stop-color="#f5e8c0" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="#f5e8c0" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="rock" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#4a5a6a"/>
+        <stop offset="100%" stop-color="#2a3540"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Sky dark left to light right -->
+    <rect x="0" y="0" width="1200" height="700" fill="url(#sky)"/>
+
+    <!-- Heavy storm clouds far left -->
+    <ellipse cx="80" cy="120" rx="180" ry="80" fill="#2a3a4a" opacity="0.85"/>
+    <ellipse cx="50" cy="100" rx="120" ry="60" fill="#1e2e3e" opacity="0.9"/>
+    <ellipse cx="180" cy="150" rx="160" ry="65" fill="#354555" opacity="0.8"/>
+    <ellipse cx="280" cy="105" rx="150" ry="65" fill="#3a4a5a" opacity="0.75"/>
+    <ellipse cx="360" cy="140" rx="120" ry="50" fill="#404e60" opacity="0.65"/>
+
+    <!-- Mid transition clouds -->
+    <ellipse cx="560" cy="115" rx="130" ry="45" fill="#5a7088" opacity="0.5"/>
+    <ellipse cx="680" cy="90" rx="110" ry="38" fill="#6a8098" opacity="0.4"/>
+
+    <!-- Light clouds right behind lighthouse -->
+    <ellipse cx="920" cy="110" rx="140" ry="48" fill="#a8bece" opacity="0.55"/>
+    <ellipse cx="1040" cy="85" rx="120" ry="40" fill="#b8cede" opacity="0.5"/>
+    <ellipse cx="1140" cy="130" rx="100" ry="36" fill="#c8dae8" opacity="0.45"/>
+
+    <!-- Sea -->
+    <rect x="0" y="480" width="1200" height="220" fill="url(#sea)"/>
+
+    <!-- Choppy dark waves left -->
+    <path d="M0 488 Q25 476 50 488 Q75 500 100 485 Q125 470 150 484 Q175 498 200 482 Q225 466 250 480 Q275 494 300 478" fill="none" stroke="#2a4a6a" stroke-width="2" opacity="0.7"/>
+    <path d="M0 508 Q35 494 70 508 Q105 522 140 506 Q175 490 210 504 Q245 518 280 502" fill="none" stroke="#2a4a6a" stroke-width="2" opacity="0.6"/>
+    <path d="M0 528 Q40 516 80 528 Q120 540 160 524 Q200 508 240 522" fill="none" stroke="#3a5a7a" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- Calmer waves right -->
+    <path d="M800 486 Q850 482 900 486 Q950 490 1000 485 Q1050 480 1100 485 Q1150 490 1200 486" fill="none" stroke="#5878a0" stroke-width="1" opacity="0.45"/>
+    <path d="M800 500 Q860 496 920 500 Q980 504 1040 499 Q1100 494 1160 499 Q1200 502 1200 502" fill="none" stroke="#5878a0" stroke-width="1" opacity="0.38"/>
+
+    <!-- Rocky outcrop - right side -->
+    <path d="M920 530 Q960 495 1020 480 Q1070 468 1110 476 Q1150 484 1165 500 Q1178 516 1165 532 Q1145 548 1105 552 Q1045 558 980 550 Q940 544 920 530Z" fill="url(#rock)"/>
+    <path d="M1020 480 Q1060 466 1100 470 Q1138 474 1152 486 Q1140 476 1110 472 Q1080 468 1050 474Z" fill="#5a6a78" opacity="0.6"/>
+
+    <!-- Wave splashes on rocks -->
+    <path d="M928 526 Q948 512 972 520 Q955 530 932 530Z" fill="white" opacity="0.7"/>
+    <path d="M924 533 Q943 522 958 528" fill="none" stroke="white" stroke-width="2" opacity="0.55"/>
+    <path d="M1150 512 Q1165 504 1178 512 Q1165 522 1152 520Z" fill="white" opacity="0.65"/>
+    <path d="M990 504 Q1008 496 1022 502 Q1010 512 994 510Z" fill="white" opacity="0.55"/>
+
+    <!-- Lighthouse keeper house - right -->
+    <rect x="1060" y="446" width="54" height="36" fill="#e8e0d0"/>
+    <rect x="1060" y="446" width="54" height="5" fill="#c0392b" opacity="0.8"/>
+    <rect x="1070" y="456" width="12" height="14" fill="#b0c8d8" opacity="0.85"/>
+    <rect x="1094" y="456" width="12" height="14" fill="#b0c8d8" opacity="0.85"/>
+    <path d="M1056 446 L1087 428 L1118 446Z" fill="#c0392b" opacity="0.85"/>
+
+    <!-- Lighthouse tower - far right -->
+    <rect x="1078" y="288" width="34" height="162" fill="#f0ece4"/>
+    <!-- Blue stripe bands - loyalty -->
+    <rect x="1078" y="308" width="34" height="24" fill="#2a5888" opacity="0.78"/>
+    <rect x="1078" y="358" width="34" height="24" fill="#2a5888" opacity="0.78"/>
+    <rect x="1078" y="408" width="34" height="24" fill="#2a5888" opacity="0.78"/>
+    <!-- Windows -->
+    <rect x="1089" y="328" width="12" height="16" rx="6" fill="#b0c8d8" opacity="0.9"/>
+    <rect x="1089" y="378" width="12" height="16" rx="6" fill="#b0c8d8" opacity="0.9"/>
+    <!-- Gallery walkway -->
+    <rect x="1073" y="278" width="44" height="7" fill="#9a9080"/>
+    <line x1="1073" y1="281" x2="1117" y2="281" stroke="#7a7068" stroke-width="1"/>
+    <!-- Lantern room -->
+    <rect x="1080" y="252" width="30" height="30" fill="#c0392b"/>
+    <rect x="1082" y="254" width="26" height="24" rx="2" fill="#d8e8f0" opacity="0.85"/>
+    <!-- Light source -->
+    <circle cx="1095" cy="266" r="7" fill="#f8e060" opacity="0.98"/>
+    <circle cx="1095" cy="266" r="3" fill="white" opacity="0.95"/>
+    <!-- Lantern cap -->
+    <path d="M1076 252 L1095 238 L1114 252Z" fill="#a02820"/>
+    <!-- Base detail -->
+    <rect x="1074" y="446" width="42" height="8" fill="#d8d0c0"/>
+
+    <!-- BEAM sweeping LEFT into darkness - from lighthouse far right -->
+    <polygon points="1095,266 300,160 100,440" fill="url(#beam)" opacity="0.65"/>
+
+    <!-- Foreground dark waves left -->
+    <path d="M0 545 Q40 530 80 544 Q120 558 160 542 Q200 526 240 540 Q280 554 320 538 Q360 522 400 536 Q440 550 480 534" fill="none" stroke="white" stroke-width="2.5" opacity="0.35"/>
+    <path d="M0 562 Q50 550 100 562 Q150 574 200 558 Q250 542 300 556" fill="none" stroke="white" stroke-width="1.5" opacity="0.25"/>
+  </svg>
+
+  <!-- Text content on LEFT where beam illuminates -->
+  <div class="hero-content">
+    <h1>Where buyers find what listings cannot show</h1>
+    <p>Traditional property listings are written for search filters. Digital Lighthouse writes for how buyers actually search — in Google, in ChatGPT, in Perplexity, at midnight.</p>
+    <a href="#cases" class="hero-cta">See the first case →</a>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-inner">
+    <h2>The problem</h2>
+    <p>Every realtor in the Netherlands lists on Funda. Posts on social media. Waits. The buyer who searches "renovation project Den Helder with garden and split potential" at 11pm finds nothing. That buyer exists. They simply cannot find the property.</p>
+  </div>
+</section>
+
+<section class="section" id="method" style="background: #edf1f6;">
+  <div class="section-inner">
+    <h2>The method</h2>
+    <p>Digital Lighthouse builds a supplementary discovery layer — not competing with the realtor, feeding them buyers they cannot reach.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-num">01</div>
+        <h3>Buyer intent research</h3>
+        <p>Map what the right buyer actually types into Google, Perplexity, and ChatGPT before they ever visit Funda.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">02</div>
+        <h3>Persona-specific content</h3>
+        <p>Three different buyers need three different stories. The investor, the self-builder, the green visionary — each gets their own page.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">03</div>
+        <h3>AI search visibility</h3>
+        <p>GEO-optimised content that conversational AI engines index, trust, and recommend when buyers ask the right question.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">04</div>
+        <h3>Leads to the realtor</h3>
+        <p>Every enquiry routes directly to the listing realtor. Digital Lighthouse finds the buyer. The realtor closes the deal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-study" id="cases">
+  <div class="case-study-inner">
+    <div class="cs-tag">Case study #1 — active experiment</div>
+    <h2>Zuidstraat 84, Den Helder</h2>
+    <p>A 140m² project property with architect-drawn split plans, southwest garden, and solar roof potential. Two viewings in six weeks from a traditional listing. Digital Lighthouse is running the experiment now.</p>
+    <a href="/zuidstraat84" class="cs-link">Read the case study →</a>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="section-inner">
+    <h2>Work with Digital Lighthouse</h2>
+    <p>If you have a property or a business that traditional marketing cannot find the right audience for — the channel that reaches them already exists. It just has not been built yet.</p>
+    <a href="mailto:ahoy@digitallighthouse.online" class="hero-cta" style="text-decoration:none; display: inline-block; margin-top: 1.5rem;">ahoy@digitallighthouse.online</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Digital Lighthouse</p>
+  <a href="mailto:ahoy@digitallighthouse.online">ahoy@digitallighthouse.online</a>
+</footer>
+
+</body>
+</html>
